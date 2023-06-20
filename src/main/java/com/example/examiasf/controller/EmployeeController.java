@@ -18,6 +18,6 @@ public class EmployeeController {
     public String list(Model model) {
         List<EmployeeDTO> employees = employeeService.findAllEmployees();
         model.addAttribute("employees", employees);
-        return "employee-list";
+        return "Employee/list";
     }
 }
