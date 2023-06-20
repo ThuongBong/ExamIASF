@@ -14,11 +14,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public EmployeeDTO createEmployee(EmployeeDTO employee) {
-        return employeeRepository.save(employee);
-    }
-
     public List<EmployeeDTO> findAllEmployees() {
         return employeeRepository.findAll();
+    }
+
+    public EmployeeDTO createEmployee(EmployeeDTO employee) {
+        return employeeRepository.save(employee);
     }
 }
